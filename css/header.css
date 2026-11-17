@@ -19,7 +19,7 @@
 }
 
 .header nav,
-.contacts {
+.header .contacts {
   display: none;
 }
 
@@ -92,7 +92,7 @@
     content: "";
   }
 
-  .contacts {
+  .header .contacts {
     display: block;
     margin-left: auto;
     font-style: normal;

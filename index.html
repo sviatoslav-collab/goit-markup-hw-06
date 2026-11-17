@@ -22,6 +22,7 @@
     />
 
     <link rel="stylesheet" href="./css/main.css" />
+    <script src="./js/menu-modal.js" defer></script>
   </head>
 
   <body>
@@ -66,6 +67,7 @@
           type="button"
           aria-label="Open mobile menu"
           aria-controls="mobile-menu"
+          aria-expanded="false"
         >
           <svg
             class="menu-open-icon"
@@ -91,7 +93,14 @@
       <section class="hero" id="hero">
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
-          <button class="hero-button" type="button">Order Service</button>
+          <button
+            class="hero-button"
+            type="button"
+            aria-controls="modal-dialog"
+            aria-haspopup="dialog"
+          >
+            Order Service
+          </button>
         </div>
       </section>
 
@@ -184,7 +193,7 @@
               <img
                 class="team-image"
                 src="./images/team-1.jpg"
-                srcset="./images/team-1.jpg 1x, ./images/team-1@2x.jpg 2x"
+                srcset="./images/team-1.jpg 1x, ./images/team-1@2x.png 2x"
                 alt="Mark Guerrero"
                 width="264"
                 height="260"
@@ -250,7 +259,7 @@
               <img
                 class="team-image"
                 src="./images/team-2.jpg"
-                srcset="./images/team-2.jpg 1x, ./images/team-2@2x.jpg 2x"
+                srcset="./images/team-2.jpg 1x, ./images/team-2@2x.png 2x"
                 alt="Tom Ford"
                 width="264"
                 height="260"
@@ -316,7 +325,7 @@
               <img
                 class="team-image"
                 src="./images/team-3.jpg"
-                srcset="./images/team-3.jpg 1x, ./images/team-3@2x.jpg 2x"
+                srcset="./images/team-3.jpg 1x, ./images/team-3@2x.png 2x"
                 alt="Camila Garcia"
                 width="264"
                 height="260"
@@ -382,7 +391,7 @@
               <img
                 class="team-image"
                 src="./images/team-4.jpg"
-                srcset="./images/team-4.jpg 1x, ./images/team-4@2x.jpg 2x"
+                srcset="./images/team-4.jpg 1x, ./images/team-4@2x.png 2x"
                 alt="Daniel Wilson"
                 width="264"
                 height="260"
@@ -452,7 +461,7 @@
           <h2 class="portfolio-title">Our Portfolio</h2>
 
           <ul class="portfolio-list">
-            <li class="portfolio-item">
+            <li class="portfolio-item" tabindex="0">
               <div class="portfolio-image-wrap">
                 <img
                   class="portfolio-image"
@@ -477,7 +486,7 @@
               </div>
             </li>
 
-            <li class="portfolio-item">
+            <li class="portfolio-item" tabindex="0">
               <div class="portfolio-image-wrap">
                 <img
                   class="portfolio-image"
@@ -502,7 +511,7 @@
               </div>
             </li>
 
-            <li class="portfolio-item">
+            <li class="portfolio-item" tabindex="0">
               <div class="portfolio-image-wrap">
                 <img
                   class="portfolio-image"
@@ -527,7 +536,7 @@
               </div>
             </li>
 
-            <li class="portfolio-item">
+            <li class="portfolio-item" tabindex="0">
               <div class="portfolio-image-wrap">
                 <img
                   class="portfolio-image"
@@ -552,7 +561,7 @@
               </div>
             </li>
 
-            <li class="portfolio-item">
+            <li class="portfolio-item" tabindex="0">
               <div class="portfolio-image-wrap">
                 <img
                   class="portfolio-image"
@@ -577,7 +586,7 @@
               </div>
             </li>
 
-            <li class="portfolio-item">
+            <li class="portfolio-item" tabindex="0">
               <div class="portfolio-image-wrap">
                 <img
                   class="portfolio-image"
@@ -678,7 +687,7 @@
         <div class="footer-subscribe">
           <p class="footer-subscribe-title">Subscribe</p>
 
-          <form class="footer-subscribe-form">
+          <form class="footer-subscribe-form" aria-label="Subscribe to newsletter">
             <label class="sr-only" for="subscribe-email">E-mail</label>
             <input
               class="footer-subscribe-input"
@@ -686,6 +695,8 @@
               name="subscribe-email"
               id="subscribe-email"
               placeholder="E-mail"
+              autocomplete="email"
+              required
             />
 
             <button class="footer-subscribe-button" type="submit">
@@ -704,7 +715,14 @@
       </div>
     </footer>
 
-    <div class="mobile-menu" id="mobile-menu">
+    <div
+      class="mobile-menu"
+      id="mobile-menu"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Mobile menu"
+      aria-hidden="true"
+    >
       <div class="mobile-menu-container">
         <button
           class="mobile-menu-close-button"
@@ -809,9 +827,10 @@
       </div>
     </div>
 
-    <div class="backdrop" id="modal">
+    <div class="backdrop" id="modal" aria-hidden="true">
       <div
         class="modal"
+        id="modal-dialog"
         role="dialog"
         aria-modal="true"
         aria-labelledby="modal-title"
@@ -839,6 +858,8 @@
                 type="text"
                 name="user-name"
                 id="user-name"
+                autocomplete="name"
+                required
               />
               <svg
                 class="modal-form-icon"
@@ -859,6 +880,9 @@
                 type="tel"
                 name="user-phone"
                 id="user-phone"
+                autocomplete="tel"
+                inputmode="tel"
+                required
               />
               <svg
                 class="modal-form-icon"
@@ -879,6 +903,8 @@
                 type="email"
                 name="user-email"
                 id="user-email"
+                autocomplete="email"
+                required
               />
               <svg
                 class="modal-form-icon"
