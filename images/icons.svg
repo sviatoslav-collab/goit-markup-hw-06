@@ -6,6 +6,9 @@
         }
     </style>
     <defs>
+        <symbol id="menu" viewBox="0 0 24 24" fill="none">
+            <path d="M3 6H21M3 12H21M3 18H21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+        </symbol>
         <symbol id="twitter" viewBox="0 0 16 16" fill="none">
             <path fill="currentColor" d="M12.6 0.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H0.316l5.733-6.57L0 0.75h5.063l3.495 4.633zM11.74 13.778h1.36L4.323 2.145H2.865z" />
             <defs>
