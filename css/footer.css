@@ -153,6 +153,7 @@
 
 @media screen and (min-width: 768px) {
   .footer-container {
+    max-width: 584px;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -198,6 +199,7 @@
   }
 
   .footer-container {
+    max-width: 1158px;
     flex-wrap: nowrap;
     gap: 0;
   }
