@@ -158,8 +158,6 @@
     align-items: flex-start;
     column-gap: 24px;
     row-gap: 72px;
-    padding-right: 108px;
-    padding-left: 108px;
   }
 
   .footer-brand {
@@ -202,8 +200,6 @@
   .footer-container {
     flex-wrap: nowrap;
     gap: 0;
-    padding-right: 15px;
-    padding-left: 15px;
   }
 
   .footer-socials {
